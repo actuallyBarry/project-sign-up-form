@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+:root {
+    --invalid-color: #ff8000;
+    --invalid-bg-color: #ff800033;
+    --valid-color: #22cc00;
+    --valid-bg-color: #22cc0033;
+    --main-bg-color: #f6f6f6;
+    --btn-color-1: #2e9e95;
+    --btn-color-2: #be641e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    width: 64%;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.bg-image {
+    width: 36%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 25%;
+    width: 150%;
+    height: 12rem;
+    line-height: 12rem;
+    background-color: #1b1b1b94;
+    color: #ffffffcc;
+    text-align: center;
+    font-size: 2rem;
+    rotate: 7deg;
+}
+
+.title p {
+    font-family: 'Zen Dots', cursive;
+    font-size: 3rem;
+    letter-spacing: 7px;
+    rotate: -7deg;
+}
+
+.bg-image img {
+    height: 100%;
+}
+
+.bg-image .source {
+    position: absolute;
+    bottom: 4px;
+    color: #ffffffbf;
+    font-size: .8rem;
+}
+
+.source a {
+    color: #ffffffbf;
+} 
+.source a:hover {
+    text-decoration: none;
+}
+/* ============================================================ */
+
+.header, .btn-section {
+    margin-left: 2rem;
+}
+
+.header p {
+    font-size: 1.5rem;
+    font-family: 'Lobster Two', cursive;
+    margin-right: 2.7rem;
+}
+/* ============================================================ */
+
+form {
+    background-color: #fff;
+    box-shadow: 0px 3px 3px #ccc;
+    margin: 2.5rem 2px 2rem;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+form > p {
+    width: 100%;
+    margin-bottom: .3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+form > span {
+    color: rgb(100, 100, 100);
+    width: 100%;
+    margin-bottom: .8rem;
+}
+
+/* ============================================================ */
+
+form div {
+    position: relative;
+    height: 2.5rem;
+    margin-right: 3rem;
+    margin-top: 1.2rem;
+}
+
+form div label {
+    position: absolute;
+    color: rgb(150, 150, 150);
+    top: 4px;
+    left: 7px;
+    transition: all .5s ease;
+}
+form div input:focus ~ label,
+form div input:not(:placeholder-shown) ~ label {
+    color: #666;
+    transform: scale(.8) translate(-1rem, -1.3rem);
+}
+form div label span {
+    color: #c00;
+}
+
+form div input::placeholder {
+    /* color: var(--main-bg-color); */
+    /* font-size: 0; */
+    opacity: 0;
+}
+/* ============================================================ */
+form div p {
+    display: none;
+}
+form div input:focus:invalid ~ p,
+form div input:not(:placeholder-shown):invalid ~ p {
+    display: initial;
+    position: absolute;
+    color: var(--invalid-color);
+    font-size: .8rem;
+    font-style: italic;
+}
+/* form input:required:placeholder-shown + span::after {
+    position: relative;
+    content: '*Please fill in the box!';
+    color: #cc0000;
+    margin-bottom: 4px;
+} */
+/* ============================================================ */
+
+input {
+    display: block;
+}
+input {
+    height: 2.2rem;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+    outline: 0;
+}
+
+/* input:invalid {
+    background-color: var(--invalid-bg-color);
+} */
+/* input:placeholder-shown {
+    background-color: #cc000033;
+} */
+/* input:valid {
+    background-color: var(--valid-bg-color);
+} */
+
+input:focus {
+    background-color: var(--main-bg-color);
+}
+
+input:focus:invalid,
+input:not(:placeholder-shown):invalid {
+    border-bottom: 1px solid var(--invalid-color);
+}
+/* input:focus:placeholder-shown {
+    border: 1px solid #cc0000;
+} */
+input:focus:valid,
+input:not(:placeholder-shown):valid {
+    border-bottom: 1px solid var(--valid-color);
+}
+/* ============================================================ */
+
+.btn-section button {
+    border: 0;
+    border-radius: 7px;
+    padding: .9rem 3.3rem;
+    color: #fff;
+    background-color: var(--btn-color-1);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.btn-section button:hover {
+    outline: 3px solid var(--btn-color-1);
+    color: var(--btn-color-1);
+    background-color: var(--main-bg-color);
+
+}
+
+.btn-section a {
+    display: inline-block;
+    margin-left: 5px;
+    text-decoration: none;
+    color: var(--btn-color-1);
+    transition: all .3s;
+}
+.btn-section a:hover {
+    transform: scale(1.3);
+}
+/* ============================================================ */
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+    .bg-image {
+        width: 100vw;
+        min-height: 100vh;
+    }
+    .main {
+        width: 100vw;
+        min-height: 100vh;
+    }
+}

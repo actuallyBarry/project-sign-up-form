@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-image">
+        <div class="title"><p>Rivera</p></div>
+        <img src="/images/peter-jan-rijpkema-wI6o8OwUwdw-unsplash.jpg" alt="">
+        <span class="source">Photo by <a href="https://unsplash.com/@pjrpkm">Peter Jan Rijpkema</a></span>
+    </div>
+    <div class="main">
+        <div class="header">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p><br>
+            <p>You know you want to.</p>
+        </div>
+        <form action="">
+            <p>Let's do this!</p>
+            <span>Fields marked with a (<span style="color: #c00"> *</span>) must be filled in.</span>
+            <div>
+                <input id="f-name" name="user-name" placeholder="FN" pattern="[a-zA-Z]+" required>
+                <label for="f-name">First Name<span> *</span></label>
+                <p>Name must only contain letters!</p>
+            </div>
+            <div>
+                <input id="l-name" name="last-name" placeholder="LN" pattern="[a-zA-Z]+">
+                <label for="l-name">Last Name</label>
+                <p>Must contain only letters</p>
+            </div>
+            <div>
+                <input type="email" id="email" name="user-email" placeholder="E" required>
+                <label for="email">Email<span> *</span></label>
+                <p>Valid format: Example@email.com</p>
+            </div>
+            <div>
+                <input type="tel" id="phone" name="user-phone" placeholder="PN" pattern="[0-9]{11}">
+                <label for="phone">Phone Number</label>
+                <p>It must be an 11-digit number!</p>
+            </div>
+            <div>
+                <input type="password" id="pwd" name="user-pwd" placeholder="pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" minlength="8" required>
+                <label for="pwd">Password<span> *</span></label>
+                <p>Minimum requirement: 8 characters long, one letter and one digit.</p>
+            </div>
+            <div>
+                <input type="password" id="confirm" name="pwd-confirm" placeholder="Cp" required>
+                <label for="confirm">Confirm Password<span> *</span></label>
+                <p>Enter your password a second time.</p>
+            </div>
+        </form>
+        <div class="btn-section">
+            <button>Create Account</button>
+            <p>Already have an account? <a href=""><b>Log in</b></a></p>
+        </div>
+    </div>
+</body>
+</html>
