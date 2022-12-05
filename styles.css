@@ -58,7 +58,7 @@ body {
 .title p {
     font-family: 'Zen Dots', cursive;
     font-size: 3rem;
-    letter-spacing: 7px;
+    letter-spacing: 8px;
     rotate: -7deg;
 }
 
@@ -120,7 +120,8 @@ form div {
     position: relative;
     height: 2.5rem;
     margin-right: 3rem;
-    margin-top: 1.2rem;
+    margin-top: 1.6rem;
+    flex: 1;
 }
 
 form div label {
@@ -236,12 +237,25 @@ input:not(:placeholder-shown):valid {
     body {
         flex-direction: column;
     }
+
     .bg-image {
         width: 100vw;
         min-height: 100vh;
     }
+
     .main {
         width: 100vw;
-        min-height: 100vh;
+    }
+
+    form div:last-child {
+        margin-top: 2.4rem;
+    }
+
+    .header {
+        padding-top: 2rem;
+    }
+    
+    .btn-section {
+        padding-bottom: 2rem;
     }
 }
